@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  .row.justify-content-center
+    .col-sm-6
+      h1 Account Information
+      
+      div.mt-5
+        h3 Change Password
+        form
+          .form-group
+            label(for='exampleInputEmail1') Email
+            input#exampleInputEmail1.form-control(type='email', aria-describedby='emailHelp', placeholder='Enter email')
+      
+          .form-group
+            label(for='exampleInputPassword1') New Password
+            input#exampleInputPassword1.form-control(type='text', placeholder='Password')
+          
+          .form-group
+            label(for='exampleInputPassword1') Current Password
+            input#exampleInputPassword1.form-control(type='text', placeholder='Current Password')
+          button.btn.btn-primary.form-control(type='submit') Submit
+        
+      div.mt-5
+        h3 Cancel My Account
+        form.mt-3
+          button.btn.btn-danger Cancel Account

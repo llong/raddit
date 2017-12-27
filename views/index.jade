@@ -1,5 +1,14 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  each link in links
+    div.mb-5
+      h3
+        a(href="/links/#{link.id}") #{link.title}
+      p Submitted at #{moment(link.created_at).fromNow()} by 
+        a(href="#{link.url}") me@lewislong.me
+      .btn-group(role='group', aria-label='Basic example')
+        a.btn.btn-light(href="#{link.url}", target="_blank") Visit Link
+        button.btn.btn-light(type='button') Upvote
+        button.btn.btn-light(type='button') Downvote
+      hr

@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  div.mb-5
+    h3
+      a(href="/links/#{link.id}") #{link.title}
+    p Submitted about 1 hour ago by 
+      a(href="#{link.url}") me@lewislong.me
+    .btn-group(role='group', aria-label='Basic example')
+      a.btn.btn-light(href="#{link.url}", target="_blank") Visit Link
+      button.btn.btn-light(type='button') Upvote
+      button.btn.btn-light(type='button') Downvote

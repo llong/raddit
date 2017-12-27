@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .row.justify-content-center
+    .col-sm-6
+      h1 Add A Link
+      form(method='POST', action='/links/new')
+        .form-group
+          label(for='title') Title
+          input#title.form-control(type='text', aria-describedby='emailHelp', placeholder='Enter Link Title', name="title")
+    
+        .form-group
+          label(for='url') URL
+          input#url.form-control(type='text', name='url' placeholder='Enter URL')
+        button.btn.btn-primary.form-control(type='submit') Submit

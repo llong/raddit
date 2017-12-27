@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  .row.justify-content-center
+    .col-sm-6
+      form
+        .form-group
+          label(for='exampleInputEmail1') Email address
+          input#exampleInputEmail1.form-control(type='email', aria-describedby='emailHelp', placeholder='Enter email')
+    
+        .form-group
+          label(for='exampleInputPassword1') Password
+          input#exampleInputPassword1.form-control(type='password', placeholder='Password')
+        button.btn.btn-primary.form-control(type='submit') Submit
