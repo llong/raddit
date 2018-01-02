@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var Link = require('../models/links');
 var moment = require('moment');
+var passport = require('passport');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -50,6 +51,10 @@ router.post('/links/new', function(req,res,next){
 
 router.get('/account/edit', function(req, res, next) {
   res.render('edituser', { title: 'account' });
+});
+
+router.get('/auth/redirect', passport.authenticate('google'),function(req, res, next) {
+  res.send('yo yo yo');
 });
 
 

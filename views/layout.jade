@@ -17,6 +17,8 @@ html
             a.nav-link(href='/account/edit',class="#{title === 'account' ? 'active' : ''}") Account
           li.nav-item
             a.nav-link(href='/signin',class="#{title === 'sign in' ? 'active' : ''}") Sign In
+          li.nav-item
+            a.nav-link(href='/users/signout') Sign Out
     .container.mt-5
       block content
     script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
